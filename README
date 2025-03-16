@@ -7,6 +7,10 @@ On each host where you will run connector:
    - For systemd-based systems, run: ./setup-connector.sh
    - For Alpine Linux, run: ./setup-connector-alpine.sh
 
+Before running the Alpine Linux setup script, ensure that both bash and sudo are installed. Note that sudo is available in the community repository. Verify that the community repository is enabled by checking the file /etc/apk/repositories. To install these packages, run:
+
+  apk add bash sudo
+
 What the Setup Scripts Do
 
 For systemd-based systems (setup-connector.sh):
