@@ -1,0 +1,24 @@
+Connector Setup Instructions
+
+On each host where you will run connector:
+
+1. Edit config.yaml to include the provided API key.
+2. Run the appropriate setup script based on your system:
+   - For systemd-based systems, run: ./setup-connector.sh
+   - For Alpine Linux, run: ./setup-connector-alpine.sh
+
+What the Setup Scripts Do
+
+For systemd-based systems (setup-connector.sh):
+1. Copies config.yaml and the connector binary to /opt/banyan/.
+2. Creates a systemd service named "connector".
+3. Starts the systemd service, which launches the connector binary.
+
+For Alpine Linux (setup-connector-alpine.sh):
+1. Copies config.yaml and the connector binary to /opt/banyan/.
+2. Creates an OpenRC service script (installed as /etc/init.d/connector).
+3. Starts the OpenRC service, which launches the connector binary.
+
+Logging
+
+In both cases, the connector binary is started by the service and logs to /var/log/banyan/connector.log. Log rotation is handled automatically.

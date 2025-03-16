@@ -1,0 +1,5 @@
+# Banyan Satellite Connector configuration
+
+command_center_url: "https://upnsan.bnntest.com"
+api_key_secret: "my-api-key"
+connector_name: "my-connector-name"
